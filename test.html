@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历表单</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <form action="#" method="post">
+        <table border="1" width="800" cellpadding="5" cellspacing="0" align="center">
+            <caption><h3>个人简历</h3></caption>
+            
+            <tr>
+                <td align="center">姓名</td>
+                <td><input type="text" name="username" style="width: 90%;"></td>
+                <td align="center">专业</td>
+                <td><input type="text" name="major" style="width: 90%;"></td>
+                <td rowspan="2" width="150" align="center">
+                    <p>二寸免冠照片</p>
+                    <input type="file" name="photo">
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">年龄</td>
+                <td>
+                    <input type="number" name="age" min="0" max="150"> 岁
+                </td>
+                <td align="center">学历</td>
+                <td>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li><input type="radio" name="education" value="junior"> 初中</li>
+                        <li><input type="radio" name="education" value="senior" checked> 高中</li>
+                        <li><input type="radio" name="education" value="bachelor"> 本科</li>
+                        <li><input type="radio" name="education" value="master"> 研究生</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">民族</td>
+                <td><input type="text" name="nationality"></td>
+                <td align="center">联系方式</td>
+                <td colspan="2"><input type="tel" name="phone" style="width: 90%;"></td>
+            </tr>
+
+            <tr>
+                <td align="center">政治面貌</td>
+                <td>
+                    <select name="politics">
+                        <option value="member">共青团员</option>
+                        <option value="party_member">中共党员</option>
+                        <option value="群众">群众</option>
+                    </select>
+                </td>
+                <td align="center">邮箱</td>
+                <td colspan="2"><input type="email" name="email" style="width: 90%;"></td>
+            </tr>
+
+            <tr>
+                <th colspan="5" align="left">教育经历</th>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="text" placeholder="2024.08-2028.06" style="width: 95%;"></td>
+                <td><input type="text" placeholder="学校名称" style="width: 90%;"></td>
+                <td colspan="2"><input type="text" placeholder="专业名称" style="width: 95%;"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="text" placeholder="2021.08-2024.06" style="width: 95%;"></td>
+                <td><input type="text" placeholder="学校名称" style="width: 90%;"></td>
+                <td colspan="2">
+                    高考分数 <input type="number" name="score" min="0" max="750"> [0,750]
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="5" align="left">爱好（可以列5个）</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="hobby1" style="width: 90%;"></td>
+                <td><input type="text" name="hobby2" style="width: 90%;"></td>
+                <td><input type="text" name="hobby3" style="width: 90%;"></td>
+                <td><input type="text" name="hobby4" style="width: 90%;"></td>
+                <td><input type="text" name="hobby5" style="width: 90%;"></td>
+            </tr>
+
+            <tr>
+                <th colspan="5" align="left">自我评价</th>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <textarea name="evaluation" rows="8" style="width: 98%;"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="5">
+                    <input type="submit" value="提交">
+                    <input type="reset" value="重置">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
