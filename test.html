@@ -2,23 +2,23 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>个人简历表单</title>
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-
-    <form action="#" method="post">
+    <form action="test.php" method="post" enctype="multipart/form-data">
         <table border="1" width="800" cellpadding="5" cellspacing="0" align="center">
             <caption><h3>个人简历</h3></caption>
-            
+
             <tr>
                 <td align="center">姓名</td>
-                <td><input type="text" name="username" style="width: 90%;"></td>
+                <td><input type="text" name="username" style="width: 90%;" required></td>
                 <td align="center">专业</td>
-                <td><input type="text" name="major" style="width: 90%;"></td>
+                <td><input type="text" name="major" style="width: 90%;" required></td>
                 <td rowspan="2" width="150" align="center">
                     <p>二寸免冠照片</p>
-                    <input type="file" name="photo">
+                    <input type="file" name="photo" accept="image/*">
                 </td>
             </tr>
 
@@ -42,7 +42,7 @@
                 <td align="center">民族</td>
                 <td><input type="text" name="nationality"></td>
                 <td align="center">联系方式</td>
-                <td colspan="2"><input type="tel" name="phone" style="width: 90%;"></td>
+                <td colspan="2"><input type="tel" name="phone" style="width: 90%;" required></td>
             </tr>
 
             <tr>
@@ -51,31 +51,31 @@
                     <select name="politics">
                         <option value="member">共青团员</option>
                         <option value="party_member">中共党员</option>
-                        <option value="群众">群众</option>
+                        <option value="mass">群众</option>
                     </select>
                 </td>
                 <td align="center">邮箱</td>
-                <td colspan="2"><input type="email" name="email" style="width: 90%;"></td>
+                <td colspan="2"><input type="email" name="email" style="width: 90%;" required></td>
             </tr>
 
             <tr>
                 <th colspan="5" align="left">教育经历</th>
             </tr>
             <tr>
-                <td colspan="2"><input type="text" placeholder="2024.08-2028.06" style="width: 95%;"></td>
-                <td><input type="text" placeholder="学校名称" style="width: 90%;"></td>
-                <td colspan="2"><input type="text" placeholder="专业名称" style="width: 95%;"></td>
+                <td colspan="2"><input type="text" name="college_period" placeholder="2024.08-2028.06" style="width: 95%;"></td>
+                <td><input type="text" name="college_name" placeholder="学校名称" style="width: 90%;"></td>
+                <td colspan="2"><input type="text" name="college_major" placeholder="专业名称" style="width: 95%;"></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="text" placeholder="2021.08-2024.06" style="width: 95%;"></td>
-                <td><input type="text" placeholder="学校名称" style="width: 90%;"></td>
+                <td colspan="2"><input type="text" name="highschool_period" placeholder="2021.08-2024.06" style="width: 95%;"></td>
+                <td><input type="text" name="highschool_name" placeholder="学校名称" style="width: 90%;"></td>
                 <td colspan="2">
                     高考分数 <input type="number" name="score" min="0" max="750"> [0,750]
                 </td>
             </tr>
 
             <tr>
-                <th colspan="5" align="left">爱好（可以列5个）</th>
+                <th colspan="5" align="left">爱好（可填写 5 项）</th>
             </tr>
             <tr>
                 <td><input type="text" name="hobby1" style="width: 90%;"></td>
@@ -102,6 +102,6 @@
             </tr>
         </table>
     </form>
-    <script src="validate.js"></script>
+    <script src="warning.js"></script>
 </body>
 </html>
